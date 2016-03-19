@@ -28,7 +28,7 @@ node *buildtree(){
 //对称二叉树
 void symmetry(node *p){
 	node *t = NULL;
-	if(p == NULL)
+	if(!p)
 		return ;
 	t = p->lchild;
 	p->lchild = p->rchild;

@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <conio.h>
 
 typedef struct node{
 	char data;
 	struct node *lchild,*rchild;
 }node;
+
 typedef node *bitree;
 //前序构造二叉树
 node *buildtree(){
@@ -25,7 +25,7 @@ node *buildtree(){
 
 int searchhigh(node *m){
 	int a,b;
-	a = b = 0;
+
 	if(m == NULL)
 		return 0;
 	if(m->lchild != NULL)
@@ -45,6 +45,6 @@ int main(){
 	q = buildtree();
 	high = searchhigh(q);
 	printf("二叉树的高度:%d\n",high + 1);
-	getch();
+	getchar();
 	return 0;
 }
